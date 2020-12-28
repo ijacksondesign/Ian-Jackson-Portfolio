@@ -26,13 +26,11 @@ body {
 header {
     width: 20vw;
     height: 100vh;
-    /* background-color: var(--primary-color); */
     display: inline-flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
-    position: -webkit-sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
@@ -98,14 +96,6 @@ header nav div h2 {
 }
 
 /* End of Naviation Styling */
-
-/* Start of Main Styling */
-
-main {
-    display: inline-flex;
-    flex-flow: column nowrap;
-    position: absolute;
-}
 
 /* Start of Hero Image Styling */
 
