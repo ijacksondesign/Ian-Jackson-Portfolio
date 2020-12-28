@@ -17,6 +17,16 @@
 body {
     background-color: var(--black);
     color: var(--white);
+    font-family: "proxima-nova", sans-serif;
+    overflow-x: hidden;
+}
+
+hr {
+    width: 30%;
+    height: 10px;
+    background-color: var(--primary-color);
+    border: none;
+    margin: 10px 0;
 }
 
 /* End Universal Styling */
@@ -24,7 +34,7 @@ body {
 /* Start of Navigation Styling */
 
 header {
-    width: 20vw;
+    width: 15vw;
     height: 100vh;
     display: inline-flex;
     flex-direction: column;
@@ -84,10 +94,6 @@ header nav div a {
     color: var(--white);
 }
 
-/* header nav div a:hover {
-    color: var(--primary-color);
-} */
-
 header nav div h2 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 800;
@@ -100,25 +106,83 @@ header nav div h2 {
 /* Start of Hero Image Styling */
 
 .hero-image {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
     background-image: url("../images/hero-image/hero-image-1920x1080.jpg");
     background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    top: 0;
-    left: 0;
+    background-attachment: scroll;
+}
+
+.hero-image img {
+    width: 40%;
 }
 
 /* End of Hero Image Styling */
 
 /* Start of About Me Styling */
 
-.about-me-image {
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     background-image: url("../images/about-me/about-me-image-1920x1080.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
+
+.about-me div {
+    width: 50%;
+    height: 50%;
+}
+
+.about-me h2 {
+    font-family: "proxima-nova-condensed";
+    font-size: 5rem;
+    line-height: 0.8;
+    width: 60%;
+}
+
+.about-me p {
+    width: 60%;
+}
+
+/* End of About me Styling */
+
+/* Start of Porfolio Styling */
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50vw;
+    height: 100vh;
+    margin: auto;
+}
+
+.portfolio-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio-header h2 {
+    font-size: 2rem;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 10px);
+    grid-template-rows: repeat(2, 10px);
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: var(--primary-color);
+}
+
+.grid-item {
+    background-color: var(--primary-color);
+}
+
