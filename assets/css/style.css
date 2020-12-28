@@ -54,6 +54,10 @@ nav {
     align-items: center;
 }
 
+.nav-item:hover a:hover {
+    color: var(--primary-color);
+}
+
 .nav-item h2 {
     text-align: left;
 }
@@ -74,6 +78,18 @@ nav {
     max-width: 50%;
 }
 
+header nav div a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* header nav div a:hover {
+    color: var(--primary-color);
+} */
+
 header nav div h2 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 800;
@@ -83,12 +99,36 @@ header nav div h2 {
 
 /* End of Naviation Styling */
 
+/* Start of Main Styling */
+
+main {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    position: absolute;
+}
+
+/* Start of Hero Image Styling */
+
 .hero-image {
     display: inline-flex;
     width: 100vw;
     height: 100vh;
     background-image: url("../images/hero-image/hero-image-1920x1080.jpg");
     background-size: cover;
+    background-attachment: fixed;
     position: relative;
     top: 0;
+    left: 0;
+}
+
+/* End of Hero Image Styling */
+
+/* Start of About Me Styling */
+
+.about-me-image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/about-me/about-me-image-1920x1080.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
