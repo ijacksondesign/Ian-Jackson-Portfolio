@@ -1,0 +1,94 @@
+/* Universal Styling */
+
+:root {
+    --primary-color: rgb(255, 72, 60);
+    --light-grey: rgb(217, 213, 210);
+    --dark-grey: rgb(46, 46, 46);
+    --white: rgb(255, 255, 255);
+    --black: rgb(13, 13, 13);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* End Universal Styling */
+
+/* Start of Navigation Styling */
+
+header {
+    width: 20vw;
+    height: 100vh;
+    /* background-color: var(--primary-color); */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.logo {
+    width: 99%;
+}
+
+nav {
+    height: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item h2 {
+    text-align: left;
+}
+
+.nav-icons {
+    width: 80px;
+    height: 80px;
+    background-color: var(--dark-grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.nav-icons img {
+    max-width: 50%;
+}
+
+header nav div h2 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* End of Naviation Styling */
+
+.hero-image {
+    display: inline-flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/hero-image/hero-image-1920x1080.jpg");
+    background-size: cover;
+    position: relative;
+    top: 0;
+}
