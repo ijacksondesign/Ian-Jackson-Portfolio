@@ -1,0 +1,41 @@
+[33mcommit f931f97a66ef848a6a13528cdaeecc0e2fc1bc2e[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: Ian Jackson <ijacksondesign@gmail.com>
+Date:   Mon Dec 28 15:38:00 2020 -0500
+
+    fixed nav and added portfolio section
+
+[33mcommit ee58e3a0f1b62d492eb4166bcb520ba04516177f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Ian Jackson <ijacksondesign@gmail.com>
+Date:   Mon Dec 28 10:37:34 2020 -0500
+
+    changed header from sticky to fixed
+
+[33mcommit 480645fedd8513b85499cf64326b7adf5981eab1[m
+Author: Ian Jackson <ijacksondesign@gmail.com>
+Date:   Sun Dec 27 22:55:12 2020 -0500
+
+    added sections and styled nav links
+
+[33mcommit 11d3d71be0a2de37ea9ef5a378772fd25ae899c7[m
+Author: Ian Jackson <ijacksondesign@gmail.com>
+Date:   Sun Dec 27 20:50:44 2020 -0500
+
+    added nav html and css
+
+[33mcommit 0bf71aae027085a6f536c100185fcab537668ac4[m
+Author: Ian Jackson <ijacksondesign@gmail.com>
+Date:   Sat Dec 26 14:54:50 2020 -0500
+
+    added css and file directories
+
+[33mcommit 0d459dfee0b59eb9cd94aa3198b2eb9c02ece651[m
+Author: Ian Jackson <ijacksondesign@gmail.com>
+Date:   Sat Dec 26 14:50:50 2020 -0500
+
+    created index file
+
+[33mcommit 6f911c8eca4038c89377123eab71046d39aa9837[m
+Author: Ian Jackson <75548200+ijacksondesign@users.noreply.github.com>
+Date:   Sat Dec 26 14:46:19 2020 -0500
+
+    Initial commit
