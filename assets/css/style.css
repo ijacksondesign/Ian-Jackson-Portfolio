@@ -17,8 +17,12 @@
 body {
     background-color: var(--black);
     color: var(--white);
-    font-family: "proxima-nova", sans-serif;
+    font-family: "proxima-nova-condensed", sans-serif;
     overflow-x: hidden;
+}
+
+p {
+    font-family: "proxima-nova", sans-serif; 
 }
 
 hr {
@@ -100,32 +104,13 @@ header nav div h2 {
 
 /* End of Naviation Styling */
 
-/* Start of Hero Image Styling */
-
-.hero-image {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../images/hero-image/hero-image-1920x1080.jpg");
-    background-size: cover;
-    background-attachment: scroll;
-}
-
-.hero-image img {
-    width: 40%;
-}
-
-/* End of Hero Image Styling */
-
 /* Start of About Me Styling */
 
 .about-me {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100vw;
+    align-items: flex-end;
     height: 100vh;
     background-image: url("../images/about-me/about-me-image-1920x1080.jpg");
     background-size: cover;
@@ -133,19 +118,18 @@ header nav div h2 {
 }
 
 .about-me div {
-    width: 50%;
+    width: 80%;
     height: 50%;
 }
 
 .about-me h2 {
-    font-family: "proxima-nova-condensed";
     font-size: 5rem;
     line-height: 0.8;
     width: 60%;
 }
 
 .about-me p {
-    width: 60%;
+    width: 40%;
 }
 
 /* End of About me Styling */
@@ -154,38 +138,40 @@ header nav div h2 {
 
 .portfolio {
     width: 100%;
-    height: 100vh;
 }
 
 .portfolio-container {
-    width: 60%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     justify-content: space-evenly;
 }
 
 .portfolio-section {
+    width: 80%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin: 20px 0;
 }
 
 .portfolio-header h2 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .grid-container {
     display: grid;
-    width: 60%;
+    width: 95%;
     column-gap: 10px;
     row-gap: 10px;
+    justify-items: stretch;
 }
 
 .grid-item {
-    width: 300px;
-    height: 300px;
     display: flex;
+    height: 200px;
     align-items: center;
     justify-content: center;
     background-size: cover;
@@ -200,24 +186,17 @@ header nav div h2 {
 
 /* WEB DEVELOPMENT WORK */
 
-.web {
-    grid-template-columns: 900px;
-    grid-template-rows: 1fr;
-}
-
 .wd {
     grid-column: 1 / span 3;
-    background-image: url("../images/portfolio/web-development/run-buddy.JPG");
+    background-image: url("../images/portfolio/web-development/run-buddy.jpg");
     background-position: center;
-    width: 920px;
-    height: 300px;
 }
 
 /* GRAPHIC DESIGN WORK */
 
 .graphic-design {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .gd-1 {
@@ -282,6 +261,58 @@ header nav div h2 {
 
 /* End of Portfolio Styling */
 
+.contact {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url("../images/hero-image/hero-image-1920x1080.jpg");
+}
 
+.contact-form {
+    width: 80%;
+}
 
+.contact-form form {
+    width: 60%;
+}
+
+.contact-form h2{
+    font-size: 3rem;
+    line-height: 0.9;
+}
+
+.contact-form span {
+    color: var(--primary-color);
+}
+
+.form-input {
+    border: 1px solid var(--secondary-color);
+    padding: 7px 15px;
+    font-size: 16px;
+    margin: 15px 5px 5px 0;
+}
+
+.contact-form #name, .contact-form #email {
+    width: 40%;
+    height: 30px;
+}
+
+.contact-form #subject-line, .contact-form #message {
+    width: 80.75%;
+}
+
+.contact-form button {
+    display: block;
+    width: 20%;
+    height: 40px;
+    font-family: "proxima-nova";
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    border: none;
+}
 

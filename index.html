@@ -17,15 +17,6 @@
 
         <nav>
             <div class="nav-item">
-                <a href="#home">
-                    <div class="nav-icons">
-                        <img src="./assets/images/menu-icons/menu-icons-01.svg" alt="Home Icon" />    
-                    </div>
-                    <h2>HOME</h2>
-                </a>
-            </div>
-
-            <div class="nav-item">
                 <a href="#about-me">
                     <div class="nav-icons">
                         <img src="./assets/images/menu-icons/menu-icons-02.svg" alt="About Me Icon" />
@@ -63,12 +54,6 @@
         </nav>
     </header>
 
-
-    <!-- Hero Image -->
-    <section id="home" class="hero-image">
-        <img src="./assets/images/ian-jackson-logo.svg" alt="Ian Jackson Logo" />
-    </section>
-
     <!-- About Me Section -->
     <section id="about-me" class="about-me">
         <div>
@@ -90,6 +75,7 @@
                     <h2>WEB DEVELOPMENT</h2>
                     <hr />
                 </div>
+
                 <div class="grid-container  web">
                     <div class="grid-item wd">
                         <h3>RUN BUDDY <br /> HTML/CSS</h3>
@@ -154,6 +140,23 @@
     </section>
 
     <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-form">
+            <h2>THANKS FOR STOPPING BY.
+                <br />
+                <span>NOW LET'S CREATE SOMETHING TOGETHER.</span>
+            </h2>
+            <hr />
+
+            <form action="mailto:ijacksondesign@gmail.com" method="post" enctype="text/plain">
+                <input type="text" class="form-input" id="name" placeholder="Your Name" title="Enter your full name" />
+                <input type="email" class="form-input" id="email" placeholder="Email" title="Enter your email address" />
+                <input type="text" class="form-input" id="subject-line" placeholder="Subject Line" title="Enter subject line" />
+                <textarea name="message" class="form-input" id="message" placeholder="Message" title="Input message" cols="30" rows="10"></textarea>
+                <button>SUBMIT</button>
+            </form>
+        </div>
+    </section>
     
 </body>
 </html>
