@@ -165,7 +165,10 @@ header nav div h2 {
 
 .grid-container {
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     width: 95%;
+    height: 500px;
     column-gap: 10px;
     row-gap: 10px;
     justify-items: stretch;
@@ -173,7 +176,6 @@ header nav div h2 {
 
 .grid-item {
     display: flex;
-    height: 200px;
     align-items: center;
     justify-content: center;
     background-size: cover;
@@ -222,10 +224,10 @@ header nav div h2 {
 
 /* GRAPHIC DESIGN WORK */
 
-.graphic-design {
+/* .graphic-design {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
-}
+} */
 
 .gd-1 {
     background-image: url("../images/portfolio/graphic-design/Harley-Davidson-posters.jpg");
