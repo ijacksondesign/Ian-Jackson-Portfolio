@@ -64,6 +64,13 @@ nav {
 .nav-item {
     display: flex;
     align-items: center;
+    overflow: hidden;
+}
+
+.nav-item a h2 {
+    position: relative;
+    left: 200px;
+    transition: left 0.5s;
 }
 
 .nav-item:hover a {
@@ -72,6 +79,10 @@ nav {
 
 .nav-item:hover .nav-icons {
     background-color: var(--primary-color);
+}
+
+.nav-item:hover a h2 {
+    left: 0px;
 }
 
 .nav-icons {
@@ -218,9 +229,10 @@ header nav div h2 {
 
 .wd {
     grid-column: 1 / span 3;
-    background-image: url("../images/portfolio/web-development/run-buddy.jpg");
+    background-image: url("../images/portfolio/web-development/run-buddy.JPG");
     background-position: center;
 }
+
 
 /* GRAPHIC DESIGN WORK */
 
