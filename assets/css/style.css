@@ -66,10 +66,13 @@ nav {
     align-items: center;
 }
 
-.nav-item:hover a:hover {
+.nav-item:hover a {
     color: var(--primary-color);
 }
 
+.nav-item:hover .nav-icons {
+    background-color: var(--primary-color);
+}
 
 .nav-icons {
     width: 60px;
@@ -80,7 +83,6 @@ nav {
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-
 }
 
 .nav-icons img {
@@ -178,10 +180,36 @@ header nav div h2 {
     background-attachment: cover;
     background-position: center;
     text-align: center;
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
 }
 
-.grid-container h3 {
+.grid-item h3 {
+    display: none;
     text-transform: uppercase;
+    z-index: 2;
+}
+
+.grid-item::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 72, 60, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .8s;
+    z-index: 1;
+}
+
+.grid-item:hover.grid-item::after {
+    opacity: 1;
+}
+
+.grid-item:hover h3 {
+    display: block;
 }
 
 /* WEB DEVELOPMENT WORK */
