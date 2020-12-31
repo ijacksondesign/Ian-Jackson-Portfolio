@@ -8,6 +8,10 @@
     --black: rgb(13, 13, 13);
 }
 
+html {
+    font-size: 16px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +27,8 @@ body {
 
 p {
     font-family: "proxima-nova", sans-serif; 
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 hr {
@@ -31,6 +37,11 @@ hr {
     background-color: var(--primary-color);
     border: none;
     margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
 }
 
 /* End Universal Styling */
@@ -43,19 +54,18 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     position: fixed;
-    top: 0;
-    left: 0;
+    padding: 20px 0 20px 20px;
     z-index: 9999;
 }
 
 .logo {
-    width: 99%;
+    width: 100%;
 }
 
 nav {
-    height: 50%;
+    height: 60%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -70,19 +80,8 @@ nav {
 .nav-item a h2 {
     position: relative;
     left: 200px;
-    transition: left 0.5s;
-}
-
-.nav-item:hover a {
-    color: var(--primary-color);
-}
-
-.nav-item:hover .nav-icons {
-    background-color: var(--primary-color);
-}
-
-.nav-item:hover a h2 {
-    left: 0px;
+    opacity: 0;
+    transition: left 0.4s;
 }
 
 .nav-icons {
@@ -97,29 +96,41 @@ nav {
 }
 
 .nav-icons img {
-    max-width: 50%;
+    max-width: 60%;
 }
 
 header nav div a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-decoration: none;
     color: var(--white);
 }
 
 header nav div h2 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 800;
-    font-size: 15px;
+    font-size: 1rem;
     letter-spacing: 2px;
+}
+
+.nav-item:hover a {
+    color: var(--primary-color);
+}
+
+.nav-item:hover .nav-icons {
+    background-color: var(--primary-color);
+}
+
+.nav-item:hover a h2 {
+    left: 0px;
+    opacity: 1;
 }
 
 /* End of Naviation Styling */
 
 /* Start of About Me Styling */
 
-.about-me {
+#about-me {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,18 +141,18 @@ header nav div h2 {
     background-attachment: scroll;
 }
 
-.about-me div {
+#about-me div {
     width: 80%;
     height: 50%;
 }
 
-.about-me h2 {
-    font-size: 5rem;
+#about-me h2 {
+    font-size: 4rem;
     line-height: 0.8;
     width: 60%;
 }
 
-.about-me p {
+#about-me p {
     width: 40%;
 }
 
@@ -149,7 +160,7 @@ header nav div h2 {
 
 /* Start of Porfolio Styling */
 
-.portfolio {
+#portfolio {
     width: 100%;
 }
 
@@ -177,31 +188,25 @@ header nav div h2 {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: row;
     width: 95%;
     height: 500px;
     column-gap: 10px;
     row-gap: 10px;
-    justify-items: stretch;
 }
 
 .grid-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-size: cover;
-    background-attachment: cover;
     background-position: center;
     text-align: center;
     background-color: var(--primary-color);
     position: relative;
     overflow: hidden;
-}
-
-.grid-item h3 {
-    display: none;
-    text-transform: uppercase;
-    z-index: 2;
 }
 
 .grid-item::after {
@@ -217,18 +222,37 @@ header nav div h2 {
     z-index: 1;
 }
 
+.grid-item h3, .grid-item h4 {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    transition: all 0.4s;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.grid-item h4 {
+    font-weight: 400;
+}
+
 .grid-item:hover.grid-item::after {
     opacity: 1;
 }
 
-.grid-item:hover h3 {
-    display: block;
+.grid-item:hover h3, .grid-item:hover h4 {
+    top: 0px;
+    opacity: 1;
 }
 
 /* WEB DEVELOPMENT WORK */
 
+.web {
+    height: 300px;
+    grid-template-rows: 1fr;
+}
+
 .wd {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 5;
     background-image: url("../images/portfolio/web-development/run-buddy.JPG");
     background-position: center;
 }
@@ -236,10 +260,6 @@ header nav div h2 {
 
 /* GRAPHIC DESIGN WORK */
 
-/* .graphic-design {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-} */
 
 .gd-1 {
     background-image: url("../images/portfolio/graphic-design/Harley-Davidson-posters.jpg");
@@ -303,7 +323,9 @@ header nav div h2 {
 
 /* End of Portfolio Styling */
 
-.contact {
+/* Start of Contact Styling */
+
+#contact {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -332,7 +354,7 @@ header nav div h2 {
 .form-input {
     border: 1px solid var(--secondary-color);
     padding: 7px 15px;
-    font-size: 16px;
+    font-size: 1rem;
     margin: 15px 5px 5px 0;
 }
 
@@ -357,4 +379,6 @@ header nav div h2 {
     background-color: var(--primary-color);
     border: none;
 }
+
+/* End of Contact Styling */
 
