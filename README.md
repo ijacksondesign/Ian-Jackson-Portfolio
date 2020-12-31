@@ -12,8 +12,8 @@
 ## Description <a name="description"></a>
 This portfolio was created as the second assigment for my coding Bootcamp and was the first project where we weren't given any starter code and had to build it from scratch.
 
-![Desktop View](/screenshots/desktop-view.jpg =500x)
-![Mobile View](/screenshots/mobile-view.jpg =200x)
+<img src="./screenshots/desktop-view.jpg" width="500">
+<img src="./screenshots/mobile-view.jpg" width="200">
 
 ## The Challenge <a name="challenge"></a>
 Create an online portfolio to showcase work samples for potential employers.
