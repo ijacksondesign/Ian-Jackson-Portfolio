@@ -138,6 +138,7 @@ header nav div h2 {
     height: 100vh;
     background-image: url("../images/about-me/about-me-image-1920x1080.jpg");
     background-size: cover;
+    background-position: center;
     background-attachment: scroll;
 }
 
@@ -147,7 +148,7 @@ header nav div h2 {
 }
 
 #about-me h2 {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 0.8;
     width: 60%;
 }
@@ -245,11 +246,6 @@ header nav div h2 {
 }
 
 /* WEB DEVELOPMENT WORK */
-
-/* .web {
-    height: 300px;
-    grid-template-rows: 1fr;
-} */
 
 .wd {
     grid-column: 1 / span 5;
@@ -359,6 +355,10 @@ header nav div h2 {
     margin: 15px 5px 5px 0;
 }
 
+form input:focus, form textarea:focus {
+    outline-color: var(--primary-color);
+}
+
 .contact-form #name, .contact-form #email {
     width: 40%;
     height: 30px;
@@ -385,13 +385,7 @@ header nav div h2 {
 
 /* Start of Media Queries */
 
-@media screen and (minwidth: 1024px) {
-
-}
-
-/* Mobile phones and smaller */
-@media screen and (max-width: 575px) {
-    
+@media screen and (max-width: 1024px) {
     hr {
         width: 30%;
         height: 5px;
@@ -399,31 +393,35 @@ header nav div h2 {
         border: none;
         margin: 10px 0;
     }
-
+    
     /* Navigation */
     header {
         width: 100%;
-        height: 150px;
+        height: 120px;
         position: sticky;
         position: -webkit-sticky;
         top: 0;
+        justify-content: space-around;
         align-items: center;
         padding: 10px;
         background-color: var(--black);
     }
 
     .logo {
-        width: 80%;
+        width: 40%;
     }
 
     nav {
         width: 99%;
+        height: 30px;
         flex-flow: row wrap;
         justify-content: space-around;
+        align-content: center;
     }
 
     .nav-item {
-        width: 30%;
+        width: 15%;
+        height: 20px;
         display: flex;
         flex-flow: row wrap ;
         justify-content: space-evenly;
@@ -443,25 +441,26 @@ header nav div h2 {
     /* About Me */
     #about-me {
         width: 100%;
-        height: 300px;
+        height: 400px;
         position: static;
         background-position: center;
-        align-items: center;
+        align-items: flex-start;
+        padding-left: 50px;
     }
 
     #about-me div {
-        width: 90%;
-        height: 75%;
+        width: 80%;
+        height: 85%;
     }
 
     #about-me h2 {
-        font-size: 2rem;
+        font-size: 2.6rem;
         line-height: 0.8;
         width: 60%;
     }
     
     #about-me p {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         width: 60%;
     }
 
@@ -535,6 +534,36 @@ header nav div h2 {
 
     .contact-form #name, .contact-form #email, .contact-form #subject-line, .contact-form #message, .contact-form button {
         width: 100%;
+    }
+
+}
+
+/* Mobile phones and smaller */
+@media screen and (max-width: 575px) {
+
+    /* Navigation */
+
+    .logo {
+        width: 60%;
+    }
+
+    .nav-item {
+        width: 30%;
+    }
+
+    /* About Me */
+    #about-me {
+        height: 400px;
+        padding-left: 20px;
+    }
+
+    #about-me div {
+        width: 90%;
+        height: 75%;
+    }
+    
+    #about-me p {
+        font-size: 0.5rem;
     }
 
 }
